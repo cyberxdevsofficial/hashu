@@ -1,23 +1,48 @@
+/* General body style */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('https://source.unsplash.com/1600x900/?technology,abstract') no-repeat center center fixed;
-  background-size: cover;
   color: #fff;
   text-align: center;
+  min-height: 100vh;
+
+  /* Background */
+  background: url('https://source.unsplash.com/1920x1080/?technology,cyber,abstract') no-repeat center center fixed;
+  background-size: cover;
 }
 
+/* Header */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(0,0,0,0.6);
-  padding: 15px;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
+/* Title */
+header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
+  margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
 }
 
 nav ul li {
@@ -28,31 +53,59 @@ nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
+nav ul li a:hover {
+  color: #28a745;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    border-radius: 0 0 10px 10px;
+  }
+
+  nav.open {
+    height: 180px; /* enough to show all links */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Main section */
 main {
-  padding: 50px;
+  padding: 60px 20px;
+  background: rgba(0,0,0,0.5);
+  margin: 30px;
+  border-radius: 12px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: auto;
-}
-
-form input, form textarea {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
-
-form button {
-  padding: 10px;
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
