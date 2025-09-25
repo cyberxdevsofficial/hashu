@@ -1,3 +1,12 @@
+// Hamburger menu toggle
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger?.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+
+// Contact form WhatsApp sender
 document.getElementById("contactForm")?.addEventListener("submit", function(e) {
   e.preventDefault();
   let name = document.getElementById("name").value;
