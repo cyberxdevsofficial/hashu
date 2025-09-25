@@ -7,9 +7,8 @@ body {
   text-align: center;
   min-height: 100vh;
 
-  /* Background */
-  background: url('https://source.unsplash.com/1920x1080/?technology,cyber,abstract') no-repeat center center fixed;
-  background-size: cover;
+  /* Solid black background */
+  background: #000;
 }
 
 /* Header */
@@ -17,17 +16,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.6);
+  background: #111; /* dark black-gray */
   padding: 15px 20px;
   position: sticky;
   top: 0;
   z-index: 999;
+  border-bottom: 1px solid #222;
 }
 
 /* Title */
 header h1 {
   font-size: 22px;
   margin: 0;
+  color: #0f0; /* neon green vibe */
 }
 
 /* Hamburger */
@@ -35,6 +36,7 @@ header h1 {
   font-size: 26px;
   cursor: pointer;
   display: none;
+  color: #fff;
 }
 
 /* Navigation */
@@ -57,7 +59,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #28a745;
+  color: #0f0;
 }
 
 /* Mobile navigation */
@@ -70,7 +72,7 @@ nav ul li a:hover {
     position: absolute;
     top: 60px;
     right: 0;
-    background: rgba(0,0,0,0.9);
+    background: #111;
     width: 200px;
     height: 0;
     overflow: hidden;
@@ -96,16 +98,19 @@ nav ul li a:hover {
 /* Main section */
 main {
   padding: 60px 20px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(30, 30, 30, 0.85);
   margin: 30px;
   border-radius: 12px;
+  border: 1px solid #222;
 }
 
 /* Footer */
 footer {
-  background: rgba(0,0,0,0.6);
+  background: #111;
   padding: 15px;
   position: fixed;
   bottom: 0;
   width: 100%;
-}
+  border-top: 1px solid #222;
+  color: #888;
+    }
