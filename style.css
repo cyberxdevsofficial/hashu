@@ -1,13 +1,14 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* General body style */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   color: #fff;
   text-align: center;
   min-height: 100vh;
-
-  /* Solid black background */
   background: #000;
 }
 
@@ -16,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111; /* dark black-gray */
+  background: #111;
   padding: 15px 20px;
   position: sticky;
   top: 0;
@@ -24,11 +25,10 @@ header {
   border-bottom: 1px solid #222;
 }
 
-/* Title */
 header h1 {
   font-size: 22px;
   margin: 0;
-  color: #0f0; /* neon green vibe */
+  color: #0f0;
 }
 
 /* Hamburger */
@@ -54,7 +54,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s;
 }
 
@@ -81,7 +81,7 @@ nav ul li a:hover {
   }
 
   nav.open {
-    height: 180px; /* enough to show all links */
+    height: 180px;
   }
 
   nav ul {
@@ -104,6 +104,31 @@ main {
   border: 1px solid #222;
 }
 
+/* Pair Buttons */
+.pair-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #0f0;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1aff1a;
+  box-shadow: 0 0 10px #0f0;
+  transform: scale(1.05);
+}
+
 /* Footer */
 footer {
   background: #111;
@@ -113,4 +138,4 @@ footer {
   width: 100%;
   border-top: 1px solid #222;
   color: #888;
-    }
+  }
